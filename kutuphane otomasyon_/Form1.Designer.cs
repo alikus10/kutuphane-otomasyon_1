@@ -79,7 +79,7 @@
             this.giris_btn.Name = "giris_btn";
             this.giris_btn.Size = new System.Drawing.Size(193, 50);
             this.giris_btn.TabIndex = 2;
-            this.giris_btn.Text = "GİRİŞ 1";
+            this.giris_btn.Text = "GİRİŞ YAP 1";
             this.giris_btn.UseVisualStyleBackColor = true;
             this.giris_btn.Click += new System.EventHandler(this.button1_Click);
             // 
