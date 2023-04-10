@@ -24,7 +24,7 @@ namespace kutuphane_otomasyon_
 
             if (gelenEposta.Equals("admin") && gelenSifre.Equals("12345"))
             {
-                MessageBox.Show("Giriş Başarılı");
+                MessageBox.Show("Giriş Başarılı oldu");
             }
 
             else
