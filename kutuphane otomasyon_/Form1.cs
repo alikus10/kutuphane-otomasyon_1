@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace kutuphane_otomasyon_
 {
-    public partial class Form1 : Form
+    public partial class GirisEkranı : Form
     {
-        public Form1()
+        public GirisEkranı()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void giris_btn_Click(object sender, EventArgs e)
         {
             string gelenEposta = eposta_txt.Text;
             string gelenSifre =sifre_txt.Text;
