@@ -72,10 +72,10 @@
             // 
             // giris_btn
             // 
-            this.giris_btn.BackColor = System.Drawing.Color.OliveDrab;
-            this.giris_btn.Location = new System.Drawing.Point(99, 238);
+            this.giris_btn.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.giris_btn.Location = new System.Drawing.Point(36, 238);
             this.giris_btn.Name = "giris_btn";
-            this.giris_btn.Size = new System.Drawing.Size(127, 50);
+            this.giris_btn.Size = new System.Drawing.Size(190, 50);
             this.giris_btn.TabIndex = 2;
             this.giris_btn.Text = "GİRİŞ";
             this.giris_btn.UseVisualStyleBackColor = false;
