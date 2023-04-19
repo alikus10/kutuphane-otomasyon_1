@@ -234,5 +234,10 @@
   <ItemGroup>
     <None Include="Resources\240_F_301065920_3OPfIY9SHSIHxQbImyYOyqjGeevKZlwT.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="config.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
