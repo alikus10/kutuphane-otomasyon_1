@@ -17,10 +17,11 @@ namespace kutuphane_otomasyon_
         {
             XmlDocument config = new XmlDocument();
             config.Load("config.xml");
-
+ 
             string AuthDomain = config.DocumentElement.SelectSingleNode("/FireBase/AuthDomain").InnerText.Trim();
-            string ApiKey = config.DocumentElement.SelectSingleNode("/FireBase/ApiKey").InnerText.Trim();
-
+           string ApiKey = config.DocumentElement.SelectSingleNode("/FireBase/ApiKey").InnerText.Trim();
+         
+            
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

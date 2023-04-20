@@ -36,7 +36,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tyeniSifreTxt = new System.Windows.Forms.TextBox();
             this.tYeniGoster = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.k_olusturBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // yeniGosterCb
@@ -128,21 +128,22 @@
             this.tYeniGoster.UseVisualStyleBackColor = true;
             this.tYeniGoster.CheckedChanged += new System.EventHandler(this.tYeniGoster_CheckedChanged);
             // 
-            // button1
+            // k_olusturBtn
             // 
-            this.button1.Location = new System.Drawing.Point(346, 237);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 37);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Kullanıcı Oluştur";
-            this.button1.UseVisualStyleBackColor = true;
+            this.k_olusturBtn.Location = new System.Drawing.Point(346, 237);
+            this.k_olusturBtn.Name = "k_olusturBtn";
+            this.k_olusturBtn.Size = new System.Drawing.Size(132, 37);
+            this.k_olusturBtn.TabIndex = 10;
+            this.k_olusturBtn.Text = "Kullanıcı Oluştur";
+            this.k_olusturBtn.UseVisualStyleBackColor = true;
+           
             // 
             // YeniKullanıcı
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.k_olusturBtn);
             this.Controls.Add(this.tyeniSifreTxt);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tYeniGoster);
@@ -161,13 +162,13 @@
         #endregion
 
         private System.Windows.Forms.CheckBox yeniGosterCb;
-        private System.Windows.Forms.TextBox yeniSifreTxt;
-        private System.Windows.Forms.TextBox yeniEmailTxt;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tyeniSifreTxt;
         private System.Windows.Forms.CheckBox tYeniGoster;
-        private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.TextBox yeniSifreTxt;
+        public System.Windows.Forms.TextBox yeniEmailTxt;
+        public System.Windows.Forms.TextBox tyeniSifreTxt;
+        public System.Windows.Forms.Button k_olusturBtn;
     }
 }

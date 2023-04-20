@@ -39,9 +39,9 @@
             this.GirisYapBtn.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.GirisYapBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.GirisYapBtn.ForeColor = System.Drawing.Color.White;
-            this.GirisYapBtn.Location = new System.Drawing.Point(182, 367);
+            this.GirisYapBtn.Location = new System.Drawing.Point(181, 328);
             this.GirisYapBtn.Name = "GirisYapBtn";
-            this.GirisYapBtn.Size = new System.Drawing.Size(213, 118);
+            this.GirisYapBtn.Size = new System.Drawing.Size(213, 72);
             this.GirisYapBtn.TabIndex = 1;
             this.GirisYapBtn.Text = "Giriş Yap";
             this.GirisYapBtn.UseVisualStyleBackColor = false;
@@ -51,9 +51,9 @@
             // 
             this.YeniKullanıcıBtn.BackColor = System.Drawing.Color.Goldenrod;
             this.YeniKullanıcıBtn.ForeColor = System.Drawing.Color.White;
-            this.YeniKullanıcıBtn.Location = new System.Drawing.Point(201, 504);
+            this.YeniKullanıcıBtn.Location = new System.Drawing.Point(181, 406);
             this.YeniKullanıcıBtn.Name = "YeniKullanıcıBtn";
-            this.YeniKullanıcıBtn.Size = new System.Drawing.Size(165, 51);
+            this.YeniKullanıcıBtn.Size = new System.Drawing.Size(213, 69);
             this.YeniKullanıcıBtn.TabIndex = 2;
             this.YeniKullanıcıBtn.Text = "Hesap Oluştur";
             this.YeniKullanıcıBtn.UseVisualStyleBackColor = false;
@@ -63,7 +63,7 @@
             // 
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(530, 330);
+            this.panel1.Size = new System.Drawing.Size(530, 296);
             this.panel1.TabIndex = 3;
             // 
             // GirisEkranı
@@ -72,7 +72,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(558, 567);
+            this.ClientSize = new System.Drawing.Size(558, 518);
             this.Controls.Add(this.YeniKullanıcıBtn);
             this.Controls.Add(this.GirisYapBtn);
             this.Controls.Add(this.panel1);

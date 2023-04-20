@@ -33,7 +33,7 @@
             this.emailTxt = new System.Windows.Forms.TextBox();
             this.sifreTxt = new System.Windows.Forms.TextBox();
             this.girisGosterCb = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.girisBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -91,21 +91,22 @@
             this.girisGosterCb.UseVisualStyleBackColor = true;
             this.girisGosterCb.CheckedChanged += new System.EventHandler(this.gosterCb_CheckedChanged);
             // 
-            // button1
+            // girisBtn
             // 
-            this.button1.Location = new System.Drawing.Point(363, 237);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 37);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Giriş";
-            this.button1.UseVisualStyleBackColor = true;
+            this.girisBtn.Location = new System.Drawing.Point(363, 237);
+            this.girisBtn.Name = "girisBtn";
+            this.girisBtn.Size = new System.Drawing.Size(115, 37);
+            this.girisBtn.TabIndex = 4;
+            this.girisBtn.Text = "Giriş";
+            this.girisBtn.UseVisualStyleBackColor = true;
+           
             // 
             // KullanıcıGiris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.girisBtn);
             this.Controls.Add(this.girisGosterCb);
             this.Controls.Add(this.sifreTxt);
             this.Controls.Add(this.emailTxt);
@@ -122,9 +123,9 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox emailTxt;
-        private System.Windows.Forms.TextBox sifreTxt;
         private System.Windows.Forms.CheckBox girisGosterCb;
-        private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.TextBox emailTxt;
+        public System.Windows.Forms.TextBox sifreTxt;
+        public System.Windows.Forms.Button girisBtn;
     }
 }
