@@ -29,85 +29,68 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GirisEkranı));
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.eposta_txt = new System.Windows.Forms.TextBox();
-            this.sifre_txt = new System.Windows.Forms.TextBox();
-            this.girisBtn = new System.Windows.Forms.Button();
+            this.GirisYapBtn = new System.Windows.Forms.Button();
+            this.YeniKullanıcıBtn = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // label1
+            // GirisYapBtn
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 157);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "E-posta :";
+            this.GirisYapBtn.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.GirisYapBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.GirisYapBtn.ForeColor = System.Drawing.Color.White;
+            this.GirisYapBtn.Location = new System.Drawing.Point(182, 367);
+            this.GirisYapBtn.Name = "GirisYapBtn";
+            this.GirisYapBtn.Size = new System.Drawing.Size(213, 118);
+            this.GirisYapBtn.TabIndex = 1;
+            this.GirisYapBtn.Text = "Giriş Yap";
+            this.GirisYapBtn.UseVisualStyleBackColor = false;
+            this.GirisYapBtn.Click += new System.EventHandler(this.GirisYapBtn_Click);
             // 
-            // label2
+            // YeniKullanıcıBtn
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 198);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 16);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Şifre :";
+            this.YeniKullanıcıBtn.BackColor = System.Drawing.Color.Goldenrod;
+            this.YeniKullanıcıBtn.ForeColor = System.Drawing.Color.White;
+            this.YeniKullanıcıBtn.Location = new System.Drawing.Point(201, 504);
+            this.YeniKullanıcıBtn.Name = "YeniKullanıcıBtn";
+            this.YeniKullanıcıBtn.Size = new System.Drawing.Size(165, 51);
+            this.YeniKullanıcıBtn.TabIndex = 2;
+            this.YeniKullanıcıBtn.Text = "Hesap Oluştur";
+            this.YeniKullanıcıBtn.UseVisualStyleBackColor = false;
+            this.YeniKullanıcıBtn.Click += new System.EventHandler(this.YeniKullanıcıBtn_Click);
             // 
-            // eposta_txt
+            // panel1
             // 
-            this.eposta_txt.Location = new System.Drawing.Point(99, 157);
-            this.eposta_txt.Name = "eposta_txt";
-            this.eposta_txt.Size = new System.Drawing.Size(127, 22);
-            this.eposta_txt.TabIndex = 1;
-            // 
-            // sifre_txt
-            // 
-            this.sifre_txt.Location = new System.Drawing.Point(99, 195);
-            this.sifre_txt.Name = "sifre_txt";
-            this.sifre_txt.Size = new System.Drawing.Size(127, 22);
-            this.sifre_txt.TabIndex = 2;
-            // 
-            // girisBtn
-            // 
-            this.girisBtn.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.girisBtn.Location = new System.Drawing.Point(36, 238);
-            this.girisBtn.Name = "girisBtn";
-            this.girisBtn.Size = new System.Drawing.Size(190, 50);
-            this.girisBtn.TabIndex = 2;
-            this.girisBtn.Text = "GİRİŞ";
-            this.girisBtn.UseVisualStyleBackColor = false;
-            this.girisBtn.Click += new System.EventHandler(this.girisBtn_Click);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(530, 330);
+            this.panel1.TabIndex = 3;
             // 
             // GirisEkranı
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(259, 300);
-            this.Controls.Add(this.girisBtn);
-            this.Controls.Add(this.sifre_txt);
-            this.Controls.Add(this.eposta_txt);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(558, 567);
+            this.Controls.Add(this.YeniKullanıcıBtn);
+            this.Controls.Add(this.GirisYapBtn);
+            this.Controls.Add(this.panel1);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GirisEkranı";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Kullanıcı Girişi";
+            this.Text = " Kütüphane Giriş Ekranı";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox eposta_txt;
-        private System.Windows.Forms.TextBox sifre_txt;
-        private System.Windows.Forms.Button girisBtn;
+        private System.Windows.Forms.Button GirisYapBtn;
+        private System.Windows.Forms.Button YeniKullanıcıBtn;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

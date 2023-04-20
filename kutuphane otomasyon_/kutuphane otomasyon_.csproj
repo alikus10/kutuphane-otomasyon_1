@@ -202,10 +202,28 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Kontroller\KullanıcıGiris.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Kontroller\KullanıcıGiris.Designer.cs">
+      <DependentUpon>KullanıcıGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kontroller\YeniKullanıcı.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Kontroller\YeniKullanıcı.Designer.cs">
+      <DependentUpon>YeniKullanıcı.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kontroller\KullanıcıGiris.resx">
+      <DependentUpon>KullanıcıGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kontroller\YeniKullanıcı.resx">
+      <DependentUpon>YeniKullanıcı.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
