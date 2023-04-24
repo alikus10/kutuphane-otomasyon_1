@@ -9,9 +9,6 @@ namespace kutuphane_otomasyon_
 {
     internal static class Program
     {
-        /// <summary>
-        /// Uygulamanın ana girdi noktası.
-        /// </summary>
         [STAThread]
         static void Main()
         {
@@ -19,10 +16,9 @@ namespace kutuphane_otomasyon_
             config.Load("config.xml");
  
             string AuthDomain = config.DocumentElement.SelectSingleNode("/FireBase/AuthDomain").InnerText.Trim();
-           string ApiKey = config.DocumentElement.SelectSingleNode("/FireBase/ApiKey").InnerText.Trim();
+            string ApiKey = config.DocumentElement.SelectSingleNode("/FireBase/ApiKey").InnerText.Trim();
          
             
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new GirisEkranı(AuthDomain, ApiKey));

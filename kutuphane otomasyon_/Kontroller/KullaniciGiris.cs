@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace kutuphane_otomasyon_.Kontroller
 {
-    public partial class KullanıcıGiris : UserControl
+    public partial class KullaniciGiris : UserControl
     {
-        public KullanıcıGiris()
+        public KullaniciGiris()
         {
             InitializeComponent();
         }

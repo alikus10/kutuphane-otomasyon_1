@@ -1,6 +1,6 @@
-﻿using Firebase.Auth.Providers;
+﻿using Firebase.Auth;
+using Firebase.Auth.Providers;
 using Firebase.Auth.Repository;
-using Firebase.Auth;
 using kutuphane_otomasyon_.Kontroller;
 using System;
 using System.Collections.Generic;
@@ -17,7 +17,7 @@ namespace kutuphane_otomasyon_
     public partial class GirisEkranı : Form
     {
         private string AuthDomain, ApiKey;
-        private KullanıcıGiris user;
+        private KullaniciGiris user;
         private YeniKullanıcı newUser;
         private FirebaseAuthClient client;
         public GirisEkranı(string AuthDomain, string ApiKey)
@@ -27,7 +27,7 @@ namespace kutuphane_otomasyon_
             this.AuthDomain = AuthDomain;
             this.ApiKey = ApiKey;
 
-            user = new KullanıcıGiris();
+            user = new KullaniciGiris();
             newUser = new YeniKullanıcı();
 
             GirisYapBtn_Click(this, EventArgs.Empty);
@@ -44,26 +44,7 @@ namespace kutuphane_otomasyon_
                
             };
 
-
            this.client = new FirebaseAuthClient(config);
-        }
-
-        private async void K_olusturBtn_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                var kullanıcı_kimligi = await client.CreateUserWithEmailAndPasswordAsync(this.newUser.yeniEmailTxt.Text.Trim(),
-                                                                                      this.newUser.yeniSifreTxt.Text.Trim());
-                MessageBox.Show(kullanıcı_kimligi.User.Uid);
-            }
-            catch (Exception exc)
-            {
-                MessageBox.Show("HATA:" + exc.Message);
-            }
-            finally
-            {
-
-            }
         }
 
         private async void GirisBtn_Click(object sender, EventArgs e)
@@ -74,15 +55,36 @@ namespace kutuphane_otomasyon_
                                                                                                 this.user.sifreTxt.Text.Trim());
                 MessageBox.Show(kullanıcı_kimligi.User.Uid);
             }
+
             catch (Exception exc) 
             {
-            MessageBox.Show("HATA:"+exc.Message);
+                MessageBox.Show("HATA:"+exc.Message);
             }
+
             finally
             {
 
             }
+        }
 
+        private async void K_olusturBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var kullanıcı_kimligi = await client.CreateUserWithEmailAndPasswordAsync(this.newUser.yeniEmailTxt.Text.Trim(),
+                                                                                         this.newUser.yeniSifreTxt.Text.Trim());
+                MessageBox.Show(kullanıcı_kimligi.User.Uid);
+            }
+
+            catch (Exception exc)
+            {
+                MessageBox.Show("HATA:" + exc.Message);
+            }
+
+            finally
+            {
+
+            }
         }
 
         private void GirisYapBtn_Click(object sender, EventArgs e)
@@ -97,7 +99,5 @@ namespace kutuphane_otomasyon_
             panel1.Controls.Clear();
             panel1.Controls.Add(newUser);
         }
-
-
     }
 }

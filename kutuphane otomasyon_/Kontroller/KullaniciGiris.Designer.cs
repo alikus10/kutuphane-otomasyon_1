@@ -1,6 +1,6 @@
 ﻿namespace kutuphane_otomasyon_.Kontroller
 {
-    partial class KullanıcıGiris
+    partial class KullaniciGiris
     {
         /// <summary> 
         ///Gerekli tasarımcı değişkeni.
@@ -99,7 +99,6 @@
             this.girisBtn.TabIndex = 4;
             this.girisBtn.Text = "Giriş";
             this.girisBtn.UseVisualStyleBackColor = true;
-           
             // 
             // KullanıcıGiris
             // 
