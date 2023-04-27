@@ -54,13 +54,13 @@ namespace kutuphane_otomasyon_
                 user.girisBtn.Enabled = false;
                 user.girisPb.Visible = true;
 
-                UserCredential kullanıcı_kimligi = await client.SignInWithEmailAndPasswordAsync(this.user.emailTxt.Text.Trim(),
+                UserCredential kullanici_kimligi = await client.SignInWithEmailAndPasswordAsync(this.user.emailTxt.Text.Trim(),
                                                                                                 this.user.sifreTxt.Text.Trim());
-                MessageBox.Show("Giriş Başarıyla Yapıldı!");
+                MessageBox.Show("Giriş Başarıyla Yapıldı!","Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 this.Hide();
 
-                AnaPencere anaPencere = new AnaPencere();
+                AnaPencere anaPencere = new AnaPencere(kullanici_kimligi);
                 anaPencere.Show();
             }
 
@@ -69,7 +69,7 @@ namespace kutuphane_otomasyon_
                 user.girisBtn.Enabled = true;
                 user.girisPb.Visible = false;
 
-                MessageBox.Show("HATA:"+exc.Message);
+                MessageBox.Show("Hata:" + exc.Message, "Hata!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             finally
@@ -88,9 +88,11 @@ namespace kutuphane_otomasyon_
                     newUser.k_olusturBtn.Enabled = false;
                     newUser.kayitPb.Visible = true;
 
-                    var kullanıcı_kimligi = await client.CreateUserWithEmailAndPasswordAsync(this.newUser.yeniEmailTxt.Text.Trim(),
+                    var kullanici_kimligi = await client.CreateUserWithEmailAndPasswordAsync(this.newUser.yeniEmailTxt.Text.Trim(),
                                                                                         this.newUser.yeniSifreTxt.Text.Trim());
-                    MessageBox.Show("Kullanıcı Başarıyla Oluşturuldu!");
+                    MessageBox.Show("Kullancı Başarıyla Oluşturuldu!", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    GirisYapBtn_Click(this, EventArgs.Empty);
                 }
 
                 catch (Exception exc)
@@ -98,7 +100,7 @@ namespace kutuphane_otomasyon_
                     newUser.k_olusturBtn.Enabled = true;
                     newUser.kayitPb.Visible = false;
 
-                    MessageBox.Show("HATA:" + exc.Message);
+                    MessageBox.Show("Hata:" + exc.Message, "Hata!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
                 finally
@@ -109,7 +111,7 @@ namespace kutuphane_otomasyon_
             }
 
             else
-                MessageBox.Show("Şifreler eşleşmiyor!!");
+                MessageBox.Show("Şifreler Eşleşmiyor!!!", "Hata!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
