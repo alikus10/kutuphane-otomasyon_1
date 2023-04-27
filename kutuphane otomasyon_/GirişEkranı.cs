@@ -18,7 +18,7 @@ namespace kutuphane_otomasyon_
     {
         private string AuthDomain, ApiKey;
         private KullaniciGiris user;
-        private YeniKullanıcı newUser;
+        private KullanıcıKayıt newUser;
         private FirebaseAuthClient client;
         public GirisEkranı(string AuthDomain, string ApiKey)
         {
@@ -28,7 +28,7 @@ namespace kutuphane_otomasyon_
             this.ApiKey = ApiKey;
 
             user = new KullaniciGiris();
-            newUser = new YeniKullanıcı();
+            newUser = new KullanıcıKayıt();
 
             GirisYapBtn_Click(this, EventArgs.Empty);
 
@@ -51,40 +51,66 @@ namespace kutuphane_otomasyon_
         {
             try
             {
+                user.girisBtn.Enabled = false;
+                user.girisPb.Visible = true;
+
                 UserCredential kullanıcı_kimligi = await client.SignInWithEmailAndPasswordAsync(this.user.emailTxt.Text.Trim(),
                                                                                                 this.user.sifreTxt.Text.Trim());
-                MessageBox.Show(kullanıcı_kimligi.User.Uid);
+                MessageBox.Show("Giriş Başarıyla Yapıldı!");
+
+                this.Hide();
+
+                AnaPencere anaPencere = new AnaPencere();
+                anaPencere.Show();
             }
 
             catch (Exception exc) 
             {
+                user.girisBtn.Enabled = true;
+                user.girisPb.Visible = false;
+
                 MessageBox.Show("HATA:"+exc.Message);
             }
 
             finally
             {
-
+                user.girisBtn.Enabled = true;
+                user.girisPb.Visible = false;
             }
         }
 
         private async void K_olusturBtn_Click(object sender, EventArgs e)
         {
-            try
+            if (newUser.yeniSifreTxt.Text == newUser.tyeniSifreTxt.Text)
             {
-                var kullanıcı_kimligi = await client.CreateUserWithEmailAndPasswordAsync(this.newUser.yeniEmailTxt.Text.Trim(),
-                                                                                         this.newUser.yeniSifreTxt.Text.Trim());
-                MessageBox.Show(kullanıcı_kimligi.User.Uid);
+                try
+                {
+                    newUser.k_olusturBtn.Enabled = false;
+                    newUser.kayitPb.Visible = true;
+
+                    var kullanıcı_kimligi = await client.CreateUserWithEmailAndPasswordAsync(this.newUser.yeniEmailTxt.Text.Trim(),
+                                                                                        this.newUser.yeniSifreTxt.Text.Trim());
+                    MessageBox.Show("Kullanıcı Başarıyla Oluşturuldu!");
+                }
+
+                catch (Exception exc)
+                {
+                    newUser.k_olusturBtn.Enabled = true;
+                    newUser.kayitPb.Visible = false;
+
+                    MessageBox.Show("HATA:" + exc.Message);
+                }
+
+                finally
+                {
+                    newUser.k_olusturBtn.Enabled = true;
+                    newUser.kayitPb.Visible = false;
+                }
             }
 
-            catch (Exception exc)
-            {
-                MessageBox.Show("HATA:" + exc.Message);
-            }
+            else
+                MessageBox.Show("Şifreler eşleşmiyor!!");
 
-            finally
-            {
-
-            }
         }
 
         private void GirisYapBtn_Click(object sender, EventArgs e)

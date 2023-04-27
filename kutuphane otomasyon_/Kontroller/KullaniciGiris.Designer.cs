@@ -34,6 +34,7 @@
             this.sifreTxt = new System.Windows.Forms.TextBox();
             this.girisGosterCb = new System.Windows.Forms.CheckBox();
             this.girisBtn = new System.Windows.Forms.Button();
+            this.girisPb = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // label1
@@ -93,25 +94,36 @@
             // 
             // girisBtn
             // 
-            this.girisBtn.Location = new System.Drawing.Point(363, 237);
+            this.girisBtn.Location = new System.Drawing.Point(349, 228);
             this.girisBtn.Name = "girisBtn";
             this.girisBtn.Size = new System.Drawing.Size(115, 37);
             this.girisBtn.TabIndex = 4;
             this.girisBtn.Text = "Giriş";
             this.girisBtn.UseVisualStyleBackColor = true;
             // 
-            // KullanıcıGiris
+            // girisPb
+            // 
+            this.girisPb.ForeColor = System.Drawing.Color.White;
+            this.girisPb.Location = new System.Drawing.Point(263, 228);
+            this.girisPb.Name = "girisPb";
+            this.girisPb.Size = new System.Drawing.Size(80, 37);
+            this.girisPb.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.girisPb.TabIndex = 5;
+            this.girisPb.Visible = false;
+            // 
+            // KullaniciGiris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.girisPb);
             this.Controls.Add(this.girisBtn);
             this.Controls.Add(this.girisGosterCb);
             this.Controls.Add(this.sifreTxt);
             this.Controls.Add(this.emailTxt);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "KullanıcıGiris";
+            this.Name = "KullaniciGiris";
             this.Size = new System.Drawing.Size(530, 330);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -126,5 +138,6 @@
         public System.Windows.Forms.TextBox emailTxt;
         public System.Windows.Forms.TextBox sifreTxt;
         public System.Windows.Forms.Button girisBtn;
+        public System.Windows.Forms.ProgressBar girisPb;
     }
 }

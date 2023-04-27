@@ -1,6 +1,6 @@
 ﻿namespace kutuphane_otomasyon_.Kontroller
 {
-    partial class YeniKullanıcı
+    partial class KullanıcıKayıt
     {
         /// <summary> 
         ///Gerekli tasarımcı değişkeni.
@@ -37,6 +37,7 @@
             this.tyeniSifreTxt = new System.Windows.Forms.TextBox();
             this.tYeniGoster = new System.Windows.Forms.CheckBox();
             this.k_olusturBtn = new System.Windows.Forms.Button();
+            this.kayitPb = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // yeniGosterCb
@@ -136,13 +137,22 @@
             this.k_olusturBtn.TabIndex = 10;
             this.k_olusturBtn.Text = "Kullanıcı Oluştur";
             this.k_olusturBtn.UseVisualStyleBackColor = true;
-           
             // 
-            // YeniKullanıcı
+            // kayitPb
+            // 
+            this.kayitPb.Location = new System.Drawing.Point(254, 237);
+            this.kayitPb.Name = "kayitPb";
+            this.kayitPb.Size = new System.Drawing.Size(86, 37);
+            this.kayitPb.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.kayitPb.TabIndex = 11;
+            this.kayitPb.Visible = false;
+            // 
+            // KullanıcıKayıt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.kayitPb);
             this.Controls.Add(this.k_olusturBtn);
             this.Controls.Add(this.tyeniSifreTxt);
             this.Controls.Add(this.label3);
@@ -152,7 +162,7 @@
             this.Controls.Add(this.yeniEmailTxt);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "YeniKullanıcı";
+            this.Name = "KullanıcıKayıt";
             this.Size = new System.Drawing.Size(530, 330);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -170,5 +180,6 @@
         public System.Windows.Forms.TextBox yeniEmailTxt;
         public System.Windows.Forms.TextBox tyeniSifreTxt;
         public System.Windows.Forms.Button k_olusturBtn;
+        public System.Windows.Forms.ProgressBar kayitPb;
     }
 }

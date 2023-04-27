@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace kutuphane_otomasyon_.Kontroller
 {
-    public partial class YeniKullanıcı : UserControl
+    public partial class KullanıcıKayıt : UserControl
     {
-        public YeniKullanıcı()
+        public KullanıcıKayıt()
         {
             InitializeComponent();
         }
