@@ -236,6 +236,12 @@
     <Compile Include="KitapEkle.Designer.cs">
       <DependentUpon>KitapEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="KitaplariGor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KitaplariGor.Designer.cs">
+      <DependentUpon>KitaplariGor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Kontroller\KullaniciGiris.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -247,6 +253,12 @@
     </Compile>
     <Compile Include="Kontroller\KullanıcıKayıt.Designer.cs">
       <DependentUpon>KullanıcıKayıt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uyeİslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Uyeİslemleri.Designer.cs">
+      <DependentUpon>Uyeİslemleri.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -266,11 +278,17 @@
     <EmbeddedResource Include="KitapEkle.resx">
       <DependentUpon>KitapEkle.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="KitaplariGor.resx">
+      <DependentUpon>KitaplariGor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Kontroller\KullaniciGiris.resx">
       <DependentUpon>KullaniciGiris.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Kontroller\KullanıcıKayıt.resx">
       <DependentUpon>KullanıcıKayıt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uyeİslemleri.resx">
+      <DependentUpon>Uyeİslemleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

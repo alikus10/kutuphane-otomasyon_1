@@ -30,6 +30,8 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.uyeekleBtn = new System.Windows.Forms.Button();
+            this.ktplarıgörBtn = new System.Windows.Forms.Button();
+            this.KullaniciIslemleriBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -54,11 +56,33 @@
             this.uyeekleBtn.UseVisualStyleBackColor = true;
             this.uyeekleBtn.Click += new System.EventHandler(this.uyeekleBtn_Click);
             // 
+            // ktplarıgörBtn
+            // 
+            this.ktplarıgörBtn.Location = new System.Drawing.Point(131, 296);
+            this.ktplarıgörBtn.Name = "ktplarıgörBtn";
+            this.ktplarıgörBtn.Size = new System.Drawing.Size(158, 134);
+            this.ktplarıgörBtn.TabIndex = 2;
+            this.ktplarıgörBtn.Text = "Kitapları Görüntüle";
+            this.ktplarıgörBtn.UseVisualStyleBackColor = true;
+            this.ktplarıgörBtn.Click += new System.EventHandler(this.ktplarıgörBtn_Click);
+            // 
+            // KullaniciIslemleriBtn
+            // 
+            this.KullaniciIslemleriBtn.Location = new System.Drawing.Point(407, 300);
+            this.KullaniciIslemleriBtn.Name = "KullaniciIslemleriBtn";
+            this.KullaniciIslemleriBtn.Size = new System.Drawing.Size(156, 126);
+            this.KullaniciIslemleriBtn.TabIndex = 3;
+            this.KullaniciIslemleriBtn.Text = "Kullanıcı İşlemleri";
+            this.KullaniciIslemleriBtn.UseVisualStyleBackColor = true;
+            this.KullaniciIslemleriBtn.Click += new System.EventHandler(this.KullaniciIslemleriBtn_Click);
+            // 
             // AnaPencere
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1122, 578);
+            this.Controls.Add(this.KullaniciIslemleriBtn);
+            this.Controls.Add(this.ktplarıgörBtn);
             this.Controls.Add(this.uyeekleBtn);
             this.Controls.Add(this.button1);
             this.ForeColor = System.Drawing.Color.Black;
@@ -73,5 +97,7 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button uyeekleBtn;
+        private System.Windows.Forms.Button ktplarıgörBtn;
+        private System.Windows.Forms.Button KullaniciIslemleriBtn;
     }
 }

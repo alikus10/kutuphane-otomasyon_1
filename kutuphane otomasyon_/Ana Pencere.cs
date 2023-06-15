@@ -31,7 +31,6 @@ namespace kutuphane_otomasyon_
                                                      {
                                                          AuthTokenAsyncFactory = () => kullanici_kimligi.User.GetIdTokenAsync()
                                                      });
-                kitap_listele();
             }
             catch(Exception exc) 
             {
@@ -49,31 +48,28 @@ namespace kutuphane_otomasyon_
         {
             KitapEkle newkitap = new KitapEkle(firebaseIstemci);
             newkitap.ShowDialog();
-            kitap_listele();
         }
-
-        public async void kitap_listele()
-        {
-            IReadOnlyCollection<FirebaseObject<Kitap>> kitaplar = await firebaseIstemci.Child("Kitaplar").OrderByKey().OnceAsync<Kitap>();
-
-            DataTable kitaplar_table = new DataTable();
-
-            kitaplar_table.Columns.Add("Kitap Türü", typeof(string));
-            kitaplar_table.Columns.Add("Kitap Adı", typeof(string));
-
-
-            foreach (FirebaseObject<Kitap> kitap in kitaplar)
-            {
-                kitaplar_table.Rows.Add(kitap.Key, kitap.Object.kitapAdi);
-            }
-
-            //dataGridView1.DataSource = kitaplar_table;
-        }
+        
 
         private void uyeekleBtn_Click(object sender, EventArgs e)
         {
             UyeEkle newuye = new UyeEkle(firebaseIstemci);
             newuye.ShowDialog();
+        }
+
+        private void ktplarıgörBtn_Click(object sender, EventArgs e)
+        {
+            KitaplariGor viewkitap = new KitaplariGor(firebaseIstemci);
+
+            viewkitap.kitap_listele();         
+            viewkitap.Show();
+        }
+
+        private void KullaniciIslemleriBtn_Click(object sender, EventArgs e)
+        {
+            Uyeİslemleri viewuye = new Uyeİslemleri(firebaseIstemci);
+            viewuye.uye_listele();
+            viewuye.ShowDialog();
         }
     }
 }
