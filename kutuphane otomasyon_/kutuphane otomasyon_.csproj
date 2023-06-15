@@ -230,6 +230,12 @@
       <DependentUpon>GirişEkranı.cs</DependentUpon>
     </Compile>
     <Compile Include="Kitap.cs" />
+    <Compile Include="KitapEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KitapEkle.Designer.cs">
+      <DependentUpon>KitapEkle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Kontroller\KullaniciGiris.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -249,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GirişEkranı.resx">
       <DependentUpon>GirişEkranı.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KitapEkle.resx">
+      <DependentUpon>KitapEkle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Kontroller\KullaniciGiris.resx">
       <DependentUpon>KullaniciGiris.cs</DependentUpon>

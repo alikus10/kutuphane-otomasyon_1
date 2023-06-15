@@ -66,6 +66,7 @@
             this.emailTxt.Name = "emailTxt";
             this.emailTxt.Size = new System.Drawing.Size(327, 27);
             this.emailTxt.TabIndex = 1;
+            this.emailTxt.Text = "Furkan.gklk@outlook.com\r\n";
             // 
             // sifreTxt
             // 
@@ -77,6 +78,7 @@
             this.sifreTxt.PasswordChar = '*';
             this.sifreTxt.Size = new System.Drawing.Size(327, 27);
             this.sifreTxt.TabIndex = 2;
+            this.sifreTxt.Text = "Furkan123";
             // 
             // girisGosterCb
             // 

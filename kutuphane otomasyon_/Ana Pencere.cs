@@ -31,7 +31,7 @@ namespace kutuphane_otomasyon_
                                                      {
                                                          AuthTokenAsyncFactory = () => kullanici_kimligi.User.GetIdTokenAsync()
                                                      });
-                MessageBox.Show("FireBase için istemci bağlantısı başarılı :", " Başarılı ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                kitap_listele();
             }
             catch(Exception exc) 
             {
@@ -44,15 +44,35 @@ namespace kutuphane_otomasyon_
             Application.Exit();
         }
 
-        private async void button1_Click(object sender, EventArgs e)
+        // Kitap
+        private async void KitapEkle_Click(object sender, EventArgs e)
         {
-            Kitap ktp1 = new Kitap();
-            ktp1.kitapAdi = "Yaş 35";
-            Kitap ktp2 = new Kitap();
-            ktp2.kitapAdi = "Dişi Kurt";
+            KitapEkle newkitap = new KitapEkle(firebaseIstemci);
+            newkitap.ShowDialog();
+            kitap_listele();
+        }
 
-            await firebaseIstemci.Child("Kitaplar").Child("Şiir").PutAsync(ktp1);
-            await firebaseIstemci.Child("Kitaplar").Child("Hikaye").PutAsync(ktp2);
+        public async void kitap_listele()
+        {
+            IReadOnlyCollection<FirebaseObject<Kitap>> kitaplar = await firebaseIstemci.Child("Kitaplar").OrderByKey().OnceAsync<Kitap>();
+
+            DataTable kitaplar_table = new DataTable();
+
+            kitaplar_table.Columns.Add("Kitap Türü", typeof(string));
+            kitaplar_table.Columns.Add("Kitap Adı", typeof(string));
+
+
+            foreach (FirebaseObject<Kitap> kitap in kitaplar)
+            {
+                kitaplar_table.Rows.Add(kitap.Key, kitap.Object.kitapAdi);
+            }
+
+            //dataGridView1.DataSource = kitaplar_table;
+        }
+
+        private void uyeekleBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
