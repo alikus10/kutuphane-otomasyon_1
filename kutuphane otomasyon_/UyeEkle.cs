@@ -7,31 +7,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
 using Firebase.Database;
 using Firebase.Database.Query;
 
 namespace kutuphane_otomasyon_
 {
-    public partial class KitapEkle : Form
+    public partial class UyeEkle : Form
     {
         FirebaseClient istemci;
-        public KitapEkle(FirebaseClient istemci)
-        {
-            InitializeComponent();
+        public UyeEkle(FirebaseClient istemci)
+        {   
             this.istemci = istemci;
+            InitializeComponent();
         }
 
-        private async void kitapekleBtn_Click(object sender, EventArgs e)
+        private async void uyeekleBtn_Click(object sender, EventArgs e)
         {
-            try 
+            try
             {
-                Kitap yeniKitap = new Kitap();
-                yeniKitap.kitapAdi = kitapadıTxt.Text;
+                Uye yeniUye = new Uye();
+                yeniUye.uyeAdi = adTxt.Text;
+                yeniUye.uyeSoyadi = soyadTxt.Text;
+                yeniUye.telNo = telnoTxt.Text;
 
-                await istemci.Child("Kitaplar").Child(kitaptürüTxt.Text).PutAsync(yeniKitap);
+                await istemci.Child("Üyeler").Child(kimliknoTxt.Text).PutAsync(yeniUye);
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show("Hata:" + ex.Message, "Hata!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

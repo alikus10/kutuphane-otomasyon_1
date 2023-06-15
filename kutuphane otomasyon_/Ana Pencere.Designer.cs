@@ -36,7 +36,7 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
             this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(145, 54);
+            this.button1.Location = new System.Drawing.Point(392, 59);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(159, 126);
             this.button1.TabIndex = 0;
@@ -46,9 +46,9 @@
             // 
             // uyeekleBtn
             // 
-            this.uyeekleBtn.Location = new System.Drawing.Point(453, 54);
+            this.uyeekleBtn.Location = new System.Drawing.Point(131, 59);
             this.uyeekleBtn.Name = "uyeekleBtn";
-            this.uyeekleBtn.Size = new System.Drawing.Size(146, 126);
+            this.uyeekleBtn.Size = new System.Drawing.Size(150, 126);
             this.uyeekleBtn.TabIndex = 1;
             this.uyeekleBtn.Text = "Üye Ekle";
             this.uyeekleBtn.UseVisualStyleBackColor = true;

@@ -72,7 +72,8 @@ namespace kutuphane_otomasyon_
 
         private void uyeekleBtn_Click(object sender, EventArgs e)
         {
-
+            UyeEkle newuye = new UyeEkle(firebaseIstemci);
+            newuye.ShowDialog();
         }
     }
 }

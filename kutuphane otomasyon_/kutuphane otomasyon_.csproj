@@ -250,6 +250,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Uye.cs" />
+    <Compile Include="UyeEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UyeEkle.Designer.cs">
+      <DependentUpon>UyeEkle.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Ana Pencere.resx">
       <DependentUpon>Ana Pencere.cs</DependentUpon>
     </EmbeddedResource>
@@ -275,6 +282,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UyeEkle.resx">
+      <DependentUpon>UyeEkle.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
