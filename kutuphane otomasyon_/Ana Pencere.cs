@@ -1,5 +1,6 @@
 ﻿using Firebase.Auth;
 using Firebase.Database;
+using Firebase.Database.Query;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,7 +31,9 @@ namespace kutuphane_otomasyon_
                                                      {
                                                          AuthTokenAsyncFactory = () => kullanici_kimligi.User.GetIdTokenAsync()
                                                      });
-            }catch(Exception exc) 
+                MessageBox.Show("FireBase için istemci bağlantısı başarılı :", " Başarılı ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch(Exception exc) 
             {
                 MessageBox.Show("Hata:" + exc.Message, "Hata!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -39,6 +42,17 @@ namespace kutuphane_otomasyon_
         private void AnaPencere_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private async void button1_Click(object sender, EventArgs e)
+        {
+            Kitap ktp1 = new Kitap();
+            ktp1.kitapAdi = "Yaş 35";
+            Kitap ktp2 = new Kitap();
+            ktp2.kitapAdi = "Dişi Kurt";
+
+            await firebaseIstemci.Child("Kitaplar").Child("Şiir").PutAsync(ktp1);
+            await firebaseIstemci.Child("Kitaplar").Child("Hikaye").PutAsync(ktp2);
         }
     }
 }

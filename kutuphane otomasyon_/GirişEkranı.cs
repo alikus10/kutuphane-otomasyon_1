@@ -56,7 +56,6 @@ namespace kutuphane_otomasyon_
 
                 UserCredential kullanici_kimligi = await client.SignInWithEmailAndPasswordAsync(this.user.emailTxt.Text.Trim(),
                                                                                                 this.user.sifreTxt.Text.Trim());
-                MessageBox.Show("Giriş Başarıyla Yapıldı!","Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 this.Hide();
 
