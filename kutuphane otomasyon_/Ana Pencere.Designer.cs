@@ -60,7 +60,7 @@
             // 
             // ktplarıgörBtn
             // 
-            this.ktplarıgörBtn.Location = new System.Drawing.Point(131, 296);
+            this.ktplarıgörBtn.Location = new System.Drawing.Point(407, 297);
             this.ktplarıgörBtn.Name = "ktplarıgörBtn";
             this.ktplarıgörBtn.Size = new System.Drawing.Size(158, 134);
             this.ktplarıgörBtn.TabIndex = 2;
@@ -70,7 +70,7 @@
             // 
             // KullaniciIslemleriBtn
             // 
-            this.KullaniciIslemleriBtn.Location = new System.Drawing.Point(407, 300);
+            this.KullaniciIslemleriBtn.Location = new System.Drawing.Point(131, 297);
             this.KullaniciIslemleriBtn.Name = "KullaniciIslemleriBtn";
             this.KullaniciIslemleriBtn.Size = new System.Drawing.Size(156, 126);
             this.KullaniciIslemleriBtn.TabIndex = 3;

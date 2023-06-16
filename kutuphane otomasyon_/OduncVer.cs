@@ -77,12 +77,12 @@ namespace kutuphane_otomasyon_
             try
             {
                 Odunc yeniodunc = new Odunc();
-                yeniodunc.oduncUye = oduncuyenoTxt.Text;
+              //  yeniodunc.oduncUye = oduncuyenoTxt.Text;
                 yeniodunc.oduncKitap = odunckitapTxt.Text;
                 yeniodunc.oduncVerilis = verilistrhTxt.Text;
                 yeniodunc.oduncTeslim = teslimtrhTxt.Text;
 
-                await istemci.Child("Ödünçler").PutAsync(yeniodunc);
+                await istemci.Child("Ödünçler").Child(oduncuyenoTxt.Text).PutAsync(yeniodunc);
                 MessageBox.Show("Ödünç Verme İşlemi Başarıyla Tamamlandı", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 

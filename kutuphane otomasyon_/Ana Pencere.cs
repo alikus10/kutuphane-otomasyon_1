@@ -82,7 +82,9 @@ namespace kutuphane_otomasyon_
 
         private void odunctakipBtn_Click(object sender, EventArgs e)
         {
-
+            OduncTakip viewoduncler = new OduncTakip(firebaseIstemci);
+            viewoduncler.odunc_listele();
+            viewoduncler.Show();
         }
     }
 }

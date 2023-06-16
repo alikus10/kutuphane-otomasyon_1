@@ -8,17 +8,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Firebase.Database.Query;
 
 namespace kutuphane_otomasyon_
 {
     public partial class OduncTakip : Form
     {
-        public OduncTakip()
+        FirebaseClient istemci;
+        public OduncTakip(FirebaseClient istemci)
         {
+            this.istemci = istemci;
             InitializeComponent();
         }
 
-        public async void uye_listele()
+        public async void odunc_listele()
         {
             IReadOnlyCollection<FirebaseObject<Odunc>> oduncler = await istemci.Child("Ödünçler").OrderByKey().OnceAsync<Odunc>();
 
@@ -27,14 +30,14 @@ namespace kutuphane_otomasyon_
             oduncler_table.Columns.Add("Üye Kimlik No", typeof(string));
             oduncler_table.Columns.Add("Kitap Adı", typeof(string));
             oduncler_table.Columns.Add("Veriliş Tarihi", typeof(string));
-            oduncler_table.Columns.Add("Tel No", typeof(string));
+            oduncler_table.Columns.Add("Teslim Tarihi", typeof(string));
 
-            foreach (FirebaseObject<Uye> odunc in oduncler)
+            foreach (FirebaseObject<Odunc> odunc in oduncler)
             {
-                uyeler_table.Rows.Add(uye.Key, uye.Object.uyeAdi, uye.Object.uyeSoyadi, uye.Object.telNo);
+                oduncler_table.Rows.Add( odunc.Key, odunc.Object.oduncKitap, odunc.Object.oduncVerilis, odunc.Object.oduncTeslim);
             }
 
-            uyelisteleDgw.DataSource = uyeler_table;
+            odunctakipDgw.DataSource = oduncler_table;
         }
     }
 }
