@@ -32,13 +32,15 @@
             this.uyeekleBtn = new System.Windows.Forms.Button();
             this.ktplarıgörBtn = new System.Windows.Forms.Button();
             this.KullaniciIslemleriBtn = new System.Windows.Forms.Button();
+            this.oduncverBtn = new System.Windows.Forms.Button();
+            this.odunctakipBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
             this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(392, 59);
+            this.button1.Location = new System.Drawing.Point(407, 59);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(159, 126);
             this.button1.TabIndex = 0;
@@ -76,11 +78,33 @@
             this.KullaniciIslemleriBtn.UseVisualStyleBackColor = true;
             this.KullaniciIslemleriBtn.Click += new System.EventHandler(this.KullaniciIslemleriBtn_Click);
             // 
+            // oduncverBtn
+            // 
+            this.oduncverBtn.Location = new System.Drawing.Point(723, 59);
+            this.oduncverBtn.Name = "oduncverBtn";
+            this.oduncverBtn.Size = new System.Drawing.Size(147, 126);
+            this.oduncverBtn.TabIndex = 4;
+            this.oduncverBtn.Text = "Ödünç Ver";
+            this.oduncverBtn.UseVisualStyleBackColor = true;
+            this.oduncverBtn.Click += new System.EventHandler(this.oduncverBtn_Click);
+            // 
+            // odunctakipBtn
+            // 
+            this.odunctakipBtn.Location = new System.Drawing.Point(723, 297);
+            this.odunctakipBtn.Name = "odunctakipBtn";
+            this.odunctakipBtn.Size = new System.Drawing.Size(153, 132);
+            this.odunctakipBtn.TabIndex = 5;
+            this.odunctakipBtn.Text = "Ödünç Takip";
+            this.odunctakipBtn.UseVisualStyleBackColor = true;
+            this.odunctakipBtn.Click += new System.EventHandler(this.odunctakipBtn_Click);
+            // 
             // AnaPencere
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1122, 578);
+            this.Controls.Add(this.odunctakipBtn);
+            this.Controls.Add(this.oduncverBtn);
             this.Controls.Add(this.KullaniciIslemleriBtn);
             this.Controls.Add(this.ktplarıgörBtn);
             this.Controls.Add(this.uyeekleBtn);
@@ -99,5 +123,7 @@
         private System.Windows.Forms.Button uyeekleBtn;
         private System.Windows.Forms.Button ktplarıgörBtn;
         private System.Windows.Forms.Button KullaniciIslemleriBtn;
+        private System.Windows.Forms.Button oduncverBtn;
+        private System.Windows.Forms.Button odunctakipBtn;
     }
 }

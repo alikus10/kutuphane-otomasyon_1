@@ -69,7 +69,20 @@ namespace kutuphane_otomasyon_
         {
             Uyeİslemleri viewuye = new Uyeİslemleri(firebaseIstemci);
             viewuye.uye_listele();
-            viewuye.ShowDialog();
+            viewuye.Show();
+        }
+
+        private void oduncverBtn_Click(object sender, EventArgs e)
+        {
+            OduncVer viewodunc = new OduncVer(firebaseIstemci);
+            viewodunc.uye_listele();
+            viewodunc.kitap_listele();
+            viewodunc.Show();
+        }
+
+        private void odunctakipBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

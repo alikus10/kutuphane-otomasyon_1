@@ -254,6 +254,19 @@
     <Compile Include="Kontroller\KullanıcıKayıt.Designer.cs">
       <DependentUpon>KullanıcıKayıt.cs</DependentUpon>
     </Compile>
+    <Compile Include="Odunc.cs" />
+    <Compile Include="OduncTakip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OduncTakip.Designer.cs">
+      <DependentUpon>OduncTakip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OduncVer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OduncVer.Designer.cs">
+      <DependentUpon>OduncVer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Uyeİslemleri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -286,6 +299,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Kontroller\KullanıcıKayıt.resx">
       <DependentUpon>KullanıcıKayıt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OduncTakip.resx">
+      <DependentUpon>OduncTakip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OduncVer.resx">
+      <DependentUpon>OduncVer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Uyeİslemleri.resx">
       <DependentUpon>Uyeİslemleri.cs</DependentUpon>
