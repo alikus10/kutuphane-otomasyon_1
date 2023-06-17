@@ -223,6 +223,7 @@
     <Compile Include="Ana Pencere.Designer.cs">
       <DependentUpon>Ana Pencere.cs</DependentUpon>
     </Compile>
+    <Compile Include="Config.cs" />
     <Compile Include="GirişEkranı.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -18,15 +18,18 @@ namespace kutuphane_otomasyon_
     {
         private UserCredential kullanıcı_kimligi;
         private FirebaseClient firebaseIstemci;
+        private Config ayarlar;
         public AnaPencere(UserCredential kullanici_kimligi)
         {
             InitializeComponent();
+            ayarlar = new Config();
 
             this.kullanıcı_kimligi = kullanıcı_kimligi;
             this.Text = this.Text + " | " + kullanici_kimligi.User.Info.Email;
+
             try
             {
-                firebaseIstemci = new FirebaseClient("https://kutuphaneotomasyon-skybird-default-rtdb.europe-west1.firebasedatabase.app/",
+                firebaseIstemci = new FirebaseClient(ayarlar.FireBaseDomain,
                                                      new FirebaseOptions
                                                      {
                                                          AuthTokenAsyncFactory = () => kullanici_kimligi.User.GetIdTokenAsync()

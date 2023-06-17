@@ -17,15 +17,17 @@ namespace kutuphane_otomasyon_
     public partial class GirisEkranı : Form
     {
         private string AuthDomain, ApiKey;
+        private Config ayarlar;
         private KullaniciGiris user;
         private KullanıcıKayıt newUser;
         private FirebaseAuthClient client;
-        public GirisEkranı(string AuthDomain, string ApiKey)
+        public GirisEkranı(Config ayarlar)
         {
             InitializeComponent();
 
-            this.AuthDomain = AuthDomain;
-            this.ApiKey = ApiKey;
+            this.AuthDomain = ayarlar.AuthDomain;
+            this.ApiKey = ayarlar.ApiKey;
+            this.ayarlar = ayarlar;
 
             user = new KullaniciGiris();
             newUser = new KullanıcıKayıt();
