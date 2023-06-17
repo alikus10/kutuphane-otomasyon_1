@@ -11,5 +11,7 @@ namespace kutuphane_otomasyon_
         public string uyeAdi { get; set; }
         public string uyeSoyadi { get; set; }
         public string telNo { get; set; }
+
+        public string resim { get; set; }
     }
 }
