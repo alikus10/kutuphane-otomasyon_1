@@ -231,11 +231,11 @@
       <DependentUpon>GirişEkranı.cs</DependentUpon>
     </Compile>
     <Compile Include="Kitap.cs" />
-    <Compile Include="KitapEkle.cs">
+    <Compile Include="KitapEkleDuzenle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="KitapEkle.Designer.cs">
-      <DependentUpon>KitapEkle.cs</DependentUpon>
+    <Compile Include="KitapEkleDuzenle.Designer.cs">
+      <DependentUpon>KitapEkleDuzenle.cs</DependentUpon>
     </Compile>
     <Compile Include="KitaplariGor.cs">
       <SubType>Form</SubType>
@@ -277,11 +277,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Uye.cs" />
-    <Compile Include="UyeEkle.cs">
+    <Compile Include="UyeEkleDuzenle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UyeEkle.Designer.cs">
-      <DependentUpon>UyeEkle.cs</DependentUpon>
+    <Compile Include="UyeEkleDuzenle.Designer.cs">
+      <DependentUpon>UyeEkleDuzenle.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Ana Pencere.resx">
       <DependentUpon>Ana Pencere.cs</DependentUpon>
@@ -289,8 +289,8 @@
     <EmbeddedResource Include="GirişEkranı.resx">
       <DependentUpon>GirişEkranı.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KitapEkle.resx">
-      <DependentUpon>KitapEkle.cs</DependentUpon>
+    <EmbeddedResource Include="KitapEkleDuzenle.resx">
+      <DependentUpon>KitapEkleDuzenle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KitaplariGor.resx">
       <DependentUpon>KitaplariGor.cs</DependentUpon>
@@ -320,8 +320,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UyeEkle.resx">
-      <DependentUpon>UyeEkle.cs</DependentUpon>
+    <EmbeddedResource Include="UyeEkleDuzenle.resx">
+      <DependentUpon>UyeEkleDuzenle.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

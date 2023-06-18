@@ -102,7 +102,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1122, 578);
+            this.ClientSize = new System.Drawing.Size(1085, 565);
             this.Controls.Add(this.odunctakipBtn);
             this.Controls.Add(this.oduncverBtn);
             this.Controls.Add(this.KullaniciIslemleriBtn);

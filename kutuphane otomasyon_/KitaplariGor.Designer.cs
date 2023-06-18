@@ -34,13 +34,17 @@
             // 
             // kitaplisteleDgw
             // 
+            this.kitaplisteleDgw.AllowUserToAddRows = false;
+            this.kitaplisteleDgw.AllowUserToDeleteRows = false;
             this.kitaplisteleDgw.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.kitaplisteleDgw.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.kitaplisteleDgw.Location = new System.Drawing.Point(45, 36);
             this.kitaplisteleDgw.Name = "kitaplisteleDgw";
             this.kitaplisteleDgw.RowHeadersWidth = 51;
             this.kitaplisteleDgw.RowTemplate.Height = 24;
             this.kitaplisteleDgw.Size = new System.Drawing.Size(308, 399);
             this.kitaplisteleDgw.TabIndex = 0;
+            this.kitaplisteleDgw.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.kitaplisteleDgw_CellMouseClick);
             // 
             // KitaplariGor
             // 

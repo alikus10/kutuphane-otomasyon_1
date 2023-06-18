@@ -43,6 +43,7 @@
             this.uyelisteleDgw.RowTemplate.Height = 24;
             this.uyelisteleDgw.Size = new System.Drawing.Size(672, 438);
             this.uyelisteleDgw.TabIndex = 0;
+            this.uyelisteleDgw.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.uyelisteleDgw_CellMouseClick);
             // 
             // Uyeİslemleri
             // 

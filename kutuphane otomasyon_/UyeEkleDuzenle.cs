@@ -15,13 +15,13 @@ using Firebase.Storage;
 
 namespace kutuphane_otomasyon_
 {
-    public partial class UyeEkle : Form
+    public partial class UyeEkleDuzenle : Form
     {
         private FirebaseClient istemci;
         private string resim_url = "";
         private UserCredential kimlik;
         private Config ayarlar;
-        public UyeEkle(FirebaseClient istemci, UserCredential kullanici_kimligi)
+        public UyeEkleDuzenle(FirebaseClient istemci, UserCredential kullanici_kimligi)
         {   
             this.istemci = istemci;
             this.kimlik = kullanici_kimligi;

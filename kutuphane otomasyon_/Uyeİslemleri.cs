@@ -9,15 +9,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Firebase.Database.Query;
+using Firebase.Auth;
 
 namespace kutuphane_otomasyon_
 {
     public partial class Uyeİslemleri : Form
     {
         FirebaseClient istemci;
-        public Uyeİslemleri(FirebaseClient istemci)
+        private UserCredential kimlik;
+        public Uyeİslemleri(FirebaseClient istemci, UserCredential kullanici_kimligi)
         {
             this.istemci = istemci;
+            this.kimlik = kullanici_kimligi;
+
             InitializeComponent();
         }
 
@@ -39,6 +43,21 @@ namespace kutuphane_otomasyon_
             }
 
             uyelisteleDgw.DataSource = uyeler_table;
+        }
+
+        private void uyelisteleDgw_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int selected = e.RowIndex;
+            UyeEkleDuzenle uyeDuzenle = new UyeEkleDuzenle(istemci, kimlik);
+            uyeDuzenle.Text = "Üye Bilgilerini Güncelle";
+            uyeDuzenle.adTxt.Text = uyelisteleDgw.Rows[selected].Cells["Adı"].Value.ToString();
+            uyeDuzenle.soyadTxt.Text = uyelisteleDgw.Rows[selected].Cells["Soyadı"].Value.ToString();
+            uyeDuzenle.kimliknoTxt.Text = uyelisteleDgw.Rows[selected].Cells["Kimlik No"].Value.ToString();
+            uyeDuzenle.telnoTxt.Text = uyelisteleDgw.Rows[selected].Cells["Tel No"].Value.ToString();
+            uyeDuzenle.uyeekleBtn.Text = "Güncelle";
+            
+            uyeDuzenle.ShowDialog();
+            uye_listele();
         }
     }
 }

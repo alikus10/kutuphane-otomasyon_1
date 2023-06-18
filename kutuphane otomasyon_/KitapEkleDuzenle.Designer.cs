@@ -1,6 +1,6 @@
 ﻿namespace kutuphane_otomasyon_
 {
-    partial class KitapEkle
+    partial class KitapEkleDuzenle
     {
         /// <summary>
         /// Required designer variable.
@@ -77,7 +77,7 @@
             this.kitapekleBtn.UseVisualStyleBackColor = true;
             this.kitapekleBtn.Click += new System.EventHandler(this.kitapekleBtn_Click);
             // 
-            // KitapEkle
+            // KitapEkleDuzenle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -89,7 +89,7 @@
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "KitapEkle";
+            this.Name = "KitapEkleDuzenle";
             this.Text = "Kitap Ekle";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -99,9 +99,9 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox kitaptürüTxt;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox kitapadıTxt;
-        private System.Windows.Forms.Button kitapekleBtn;
+        public System.Windows.Forms.TextBox kitaptürüTxt;
+        public System.Windows.Forms.TextBox kitapadıTxt;
+        public System.Windows.Forms.Button kitapekleBtn;
     }
 }

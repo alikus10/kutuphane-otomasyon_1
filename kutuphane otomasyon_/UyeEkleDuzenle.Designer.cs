@@ -1,6 +1,6 @@
 ﻿namespace kutuphane_otomasyon_
 {
-    partial class UyeEkle
+    partial class UyeEkleDuzenle
     {
         /// <summary>
         /// Required designer variable.
@@ -153,7 +153,7 @@
             this.uyeeklePB.TabIndex = 8;
             this.uyeeklePB.Visible = false;
             // 
-            // UyeEkle
+            // UyeEkleDuzenle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -170,7 +170,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.adTxt);
             this.Controls.Add(this.label1);
-            this.Name = "UyeEkle";
+            this.Name = "UyeEkleDuzenle";
             this.Text = "UyeEkle";
             ((System.ComponentModel.ISupportInitialize)(this.uyeresimPb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
@@ -180,19 +180,18 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox adTxt;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox soyadTxt;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox kimliknoTxt;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox telnoTxt;
-        private System.Windows.Forms.Button uyeekleBtn;
-        private System.Windows.Forms.PictureBox uyeresimPb;
         private System.Windows.Forms.Button resimsecBtn;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ProgressBar uyeeklePB;
+        public System.Windows.Forms.TextBox adTxt;
+        public System.Windows.Forms.TextBox soyadTxt;
+        public System.Windows.Forms.TextBox kimliknoTxt;
+        public System.Windows.Forms.TextBox telnoTxt;
+        public System.Windows.Forms.PictureBox uyeresimPb;
+        public System.Windows.Forms.Button uyeekleBtn;
     }
 }

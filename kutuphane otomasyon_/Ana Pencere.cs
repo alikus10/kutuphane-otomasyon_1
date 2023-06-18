@@ -50,21 +50,21 @@ namespace kutuphane_otomasyon_
         // Kitap ekle
         private async void KitapEkle_Click(object sender, EventArgs e)
         {
-            KitapEkle newkitap = new KitapEkle(firebaseIstemci);
+            KitapEkleDuzenle newkitap = new KitapEkleDuzenle(firebaseIstemci, kullanıcı_kimligi);
             newkitap.ShowDialog();
         }
         
         // Üye ekle
         private void uyeekleBtn_Click(object sender, EventArgs e)
         {
-            UyeEkle newuye = new UyeEkle(firebaseIstemci, kullanıcı_kimligi);
+            UyeEkleDuzenle newuye = new UyeEkleDuzenle(firebaseIstemci, kullanıcı_kimligi);
             newuye.ShowDialog();
         }
 
         // Kitapları Gör
         private void ktplarıgörBtn_Click(object sender, EventArgs e)
         {
-            KitaplariGor viewkitap = new KitaplariGor(firebaseIstemci);
+            KitaplariGor viewkitap = new KitaplariGor(firebaseIstemci, kullanıcı_kimligi);
 
             viewkitap.kitap_listele();         
             viewkitap.Show();
@@ -73,7 +73,7 @@ namespace kutuphane_otomasyon_
         // Kullanıcı İşlemleri
         private void KullaniciIslemleriBtn_Click(object sender, EventArgs e)
         {
-            Uyeİslemleri viewuye = new Uyeİslemleri(firebaseIstemci);
+            Uyeİslemleri viewuye = new Uyeİslemleri(firebaseIstemci, kullanıcı_kimligi);
             viewuye.uye_listele();
             viewuye.Show();
         }

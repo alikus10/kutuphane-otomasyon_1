@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Firebase.Database.Query;
-
+using Firebase.Auth;
 
 
 namespace kutuphane_otomasyon_
@@ -17,10 +17,12 @@ namespace kutuphane_otomasyon_
     public partial class KitaplariGor : Form
     {
         FirebaseClient istemci;
-        public KitaplariGor(FirebaseClient istemci)
+        private UserCredential kimlik;
+        public KitaplariGor(FirebaseClient istemci, UserCredential kimlik)
         {
             this.istemci = istemci;
             InitializeComponent();
+            this.kimlik = kimlik;
         }
 
         public async void kitap_listele()
@@ -39,6 +41,20 @@ namespace kutuphane_otomasyon_
             }
 
             kitaplisteleDgw.DataSource = kitaplar_table;
+        }
+
+        private void kitaplisteleDgw_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int selected = e.RowIndex;
+            KitapEkleDuzenle kitapDuzenle = new KitapEkleDuzenle(istemci, kimlik);
+            kitapDuzenle.Text = "Kitap Bilgilerini Güncelle";
+            kitapDuzenle.kitapadıTxt.Text = kitaplisteleDgw.Rows[selected].Cells["Kitap Adı"].Value.ToString();
+            kitapDuzenle.kitaptürüTxt.Text = kitaplisteleDgw.Rows[selected].Cells["Kitap Türü"].Value.ToString();
+
+            kitapDuzenle.kitapekleBtn.Text = "Güncelle";
+
+            kitapDuzenle.ShowDialog();
+            kitap_listele();
         }
     }
 
