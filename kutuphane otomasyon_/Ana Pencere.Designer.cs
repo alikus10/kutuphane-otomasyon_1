@@ -74,7 +74,7 @@
             this.KullaniciIslemleriBtn.Name = "KullaniciIslemleriBtn";
             this.KullaniciIslemleriBtn.Size = new System.Drawing.Size(156, 126);
             this.KullaniciIslemleriBtn.TabIndex = 3;
-            this.KullaniciIslemleriBtn.Text = "Kullanıcı İşlemleri";
+            this.KullaniciIslemleriBtn.Text = "Üye İşlemleri";
             this.KullaniciIslemleriBtn.UseVisualStyleBackColor = true;
             this.KullaniciIslemleriBtn.Click += new System.EventHandler(this.KullaniciIslemleriBtn_Click);
             // 

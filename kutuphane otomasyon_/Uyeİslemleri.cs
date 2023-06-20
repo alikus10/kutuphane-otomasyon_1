@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Firebase.Database.Query;
 using Firebase.Auth;
+using Firebase.Storage;
+using System.Net;
+using System.IO;
 
 namespace kutuphane_otomasyon_
 {
@@ -17,10 +20,20 @@ namespace kutuphane_otomasyon_
     {
         FirebaseClient istemci;
         private UserCredential kimlik;
+        FirebaseStorage firebase_depolama;
+        private Config ayarlar;
+        private int secili_id = -1;
         public Uyeİslemleri(FirebaseClient istemci, UserCredential kullanici_kimligi)
         {
             this.istemci = istemci;
             this.kimlik = kullanici_kimligi;
+            ayarlar = new Config();
+
+            firebase_depolama = new FirebaseStorage(ayarlar.FireStorageDomain, new FirebaseStorageOptions
+            {
+                AuthTokenAsyncFactory = () => kimlik.User.GetIdTokenAsync(),
+                ThrowOnCancel = true,
+            });
 
             InitializeComponent();
         }
@@ -45,19 +58,92 @@ namespace kutuphane_otomasyon_
             uyelisteleDgw.DataSource = uyeler_table;
         }
 
-        private void uyelisteleDgw_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+
+        private void uyeislemMs_Opening(object sender, CancelEventArgs e)
         {
-            int selected = e.RowIndex;
-            UyeEkleDuzenle uyeDuzenle = new UyeEkleDuzenle(istemci, kimlik);
-            uyeDuzenle.Text = "Üye Bilgilerini Güncelle";
-            uyeDuzenle.adTxt.Text = uyelisteleDgw.Rows[selected].Cells["Adı"].Value.ToString();
-            uyeDuzenle.soyadTxt.Text = uyelisteleDgw.Rows[selected].Cells["Soyadı"].Value.ToString();
-            uyeDuzenle.kimliknoTxt.Text = uyelisteleDgw.Rows[selected].Cells["Kimlik No"].Value.ToString();
-            uyeDuzenle.telnoTxt.Text = uyelisteleDgw.Rows[selected].Cells["Tel No"].Value.ToString();
-            uyeDuzenle.uyeekleBtn.Text = "Güncelle";
+            int x = uyeislemMs.Bounds.Location.X - this.Location.X - uyelisteleDgw.Location.X - 9;
+            int y = uyeislemMs.Bounds.Location.Y - this.Location.Y - uyelisteleDgw.Location.Y - 29;
+
+            secili_id = uyelisteleDgw.HitTest(x, y).RowIndex;
             
-            uyeDuzenle.ShowDialog();
-            uye_listele();
+            uyelisteleDgw.ClearSelection();
+            uyelisteleDgw.Rows[secili_id].Selected = true;
+        }
+
+        private async void düzenleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (secili_id != -1)
+            {
+                int selected = secili_id;
+                string kmlkno = uyelisteleDgw.Rows[selected].Cells["Kimlik No"].Value.ToString();
+                string ad = uyelisteleDgw.Rows[selected].Cells["Adı"].Value.ToString();
+                string soyad = uyelisteleDgw.Rows[selected].Cells["Soyadı"].Value.ToString();
+                string telno = uyelisteleDgw.Rows[selected].Cells["Tel No"].Value.ToString();
+
+                UyeEkleDuzenle uyeDuzenle = new UyeEkleDuzenle(istemci, kimlik);
+                uyeDuzenle.adTxt.Text = ad;
+                uyeDuzenle.soyadTxt.Text = soyad;
+                uyeDuzenle.kimliknoTxt.Text = kmlkno;
+                uyeDuzenle.telnoTxt.Text = telno;
+
+                uyeDuzenle.Text = "Üye Bilgilerini Güncelle";
+                uyeDuzenle.uyeekleBtn.Text = "Güncelle";
+
+                try
+                {
+                    string resim_url = await firebase_depolama.Child("ÜyeProfilResimleri")
+                                                      .Child(kmlkno)
+                                                      .Child("profil.png").GetDownloadUrlAsync();
+
+                    WebClient webistemci = new WebClient();
+                    Stream raw_dosya = webistemci.OpenRead(resim_url);
+                    Bitmap resim = new Bitmap(raw_dosya);
+                    uyeDuzenle.uyeresimPb.Image = resim;
+
+                    raw_dosya.Flush();
+                    raw_dosya.Close();
+                    istemci.Dispose();
+
+                }
+                catch (Exception ex) { }
+
+                uye_listele();
+                uyeDuzenle.ShowDialog();
+            }
+        }
+
+        private async void silToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (secili_id != -1)
+            {
+                int selected = secili_id;
+                string kmlkno = uyelisteleDgw.Rows[selected].Cells["Kimlik No"].Value.ToString();
+                string ad = uyelisteleDgw.Rows[selected].Cells["Adı"].Value.ToString();
+                string soyad = uyelisteleDgw.Rows[selected].Cells["Soyadı"].Value.ToString();
+                string telno = uyelisteleDgw.Rows[selected].Cells["Tel No"].Value.ToString();
+
+                string mesaj = String.Format("{0} Kimlik Numaralı, {1} {2} İsimli Üyeyi Silmek İstediğinizden Eminmisiniz?!",kmlkno,ad, soyad);
+
+                if(MessageBox.Show(mesaj, "DİKKAT" , MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    try
+                    {
+                        string resim_url = await firebase_depolama.Child("ÜyeProfilResimleri")
+                                                                  .Child(kmlkno)
+                                                                  .Child("profil.png").GetDownloadUrlAsync();
+                        await firebase_depolama.Child("ÜyeProfilResimleri")
+                                               .Child(kmlkno)
+                                               .Child("profil.png").DeleteAsync();
+                    }
+                    catch
+                    {
+                        await istemci.Child("Üyeler").Child(kmlkno).DeleteAsync();
+                        uye_listele();
+
+                        MessageBox.Show("Silme İşlemi Başarıyla Gerçekleşti!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
         }
     }
 }
