@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Uyeİslemleri));
             this.uyelisteleDgw = new System.Windows.Forms.DataGridView();
             this.uyeislemMs = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.düzenleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,20 +58,20 @@
             this.düzenleToolStripMenuItem,
             this.silToolStripMenuItem});
             this.uyeislemMs.Name = "uyeislemMs";
-            this.uyeislemMs.Size = new System.Drawing.Size(211, 80);
+            this.uyeislemMs.Size = new System.Drawing.Size(133, 52);
             this.uyeislemMs.Opening += new System.ComponentModel.CancelEventHandler(this.uyeislemMs_Opening);
             // 
             // düzenleToolStripMenuItem
             // 
             this.düzenleToolStripMenuItem.Name = "düzenleToolStripMenuItem";
-            this.düzenleToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.düzenleToolStripMenuItem.Size = new System.Drawing.Size(132, 24);
             this.düzenleToolStripMenuItem.Text = "Düzenle";
             this.düzenleToolStripMenuItem.Click += new System.EventHandler(this.düzenleToolStripMenuItem_Click);
             // 
             // silToolStripMenuItem
             // 
             this.silToolStripMenuItem.Name = "silToolStripMenuItem";
-            this.silToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.silToolStripMenuItem.Size = new System.Drawing.Size(132, 24);
             this.silToolStripMenuItem.Text = "Sil";
             this.silToolStripMenuItem.Click += new System.EventHandler(this.silToolStripMenuItem_Click);
             // 
@@ -80,7 +81,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(690, 482);
             this.Controls.Add(this.uyelisteleDgw);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Uyeİslemleri";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Üye İslemleri";
             ((System.ComponentModel.ISupportInitialize)(this.uyelisteleDgw)).EndInit();
             this.uyeislemMs.ResumeLayout(false);

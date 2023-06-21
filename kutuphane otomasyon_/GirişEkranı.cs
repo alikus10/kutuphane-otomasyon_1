@@ -118,13 +118,20 @@ namespace kutuphane_otomasyon_
 
         private void GirisYapBtn_Click(object sender, EventArgs e)
         {
-
+            YeniKullanıcıBtn.ForeColor = Color.Black;
+            YeniKullanıcıBtn.BackColor = Color.Gainsboro;
+            GirisYapBtn.ForeColor = Color.Teal;
+            GirisYapBtn.BackColor = Color.White;
             panel1.Controls.Clear();
             panel1.Controls.Add(user);
         }
 
         private void YeniKullanıcıBtn_Click(object sender, EventArgs e)
         {
+            GirisYapBtn.ForeColor = Color.Black;
+            GirisYapBtn.BackColor = Color.Gainsboro;
+            YeniKullanıcıBtn.ForeColor = Color.Teal;
+            YeniKullanıcıBtn.BackColor = Color.White;
             panel1.Controls.Clear();
             panel1.Controls.Add(newUser);
         }

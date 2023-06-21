@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OduncTakip));
             this.odunctakipDgw = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.odunctakipDgw)).BeginInit();
             this.SuspendLayout();
@@ -51,7 +52,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(870, 567);
             this.Controls.Add(this.odunctakipDgw);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "OduncTakip";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OduncTakip";
             ((System.ComponentModel.ISupportInitialize)(this.odunctakipDgw)).EndInit();
             this.ResumeLayout(false);

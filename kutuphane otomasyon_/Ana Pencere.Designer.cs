@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnaPencere));
             this.button1 = new System.Windows.Forms.Button();
             this.uyeekleBtn = new System.Windows.Forms.Button();
             this.ktplarıgörBtn = new System.Windows.Forms.Button();
@@ -38,11 +39,16 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(407, 59);
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.ForeColor = System.Drawing.Color.Teal;
+            this.button1.Location = new System.Drawing.Point(434, 113);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(159, 126);
+            this.button1.Size = new System.Drawing.Size(219, 170);
             this.button1.TabIndex = 0;
             this.button1.Text = "Kitap Ekle";
             this.button1.UseVisualStyleBackColor = false;
@@ -50,9 +56,15 @@
             // 
             // uyeekleBtn
             // 
-            this.uyeekleBtn.Location = new System.Drawing.Point(131, 59);
+            this.uyeekleBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.uyeekleBtn.FlatAppearance.BorderSize = 0;
+            this.uyeekleBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.uyeekleBtn.ForeColor = System.Drawing.Color.Teal;
+            this.uyeekleBtn.Location = new System.Drawing.Point(215, 113);
             this.uyeekleBtn.Name = "uyeekleBtn";
-            this.uyeekleBtn.Size = new System.Drawing.Size(150, 126);
+            this.uyeekleBtn.Size = new System.Drawing.Size(219, 170);
             this.uyeekleBtn.TabIndex = 1;
             this.uyeekleBtn.Text = "Üye Ekle";
             this.uyeekleBtn.UseVisualStyleBackColor = true;
@@ -60,9 +72,15 @@
             // 
             // ktplarıgörBtn
             // 
-            this.ktplarıgörBtn.Location = new System.Drawing.Point(407, 297);
+            this.ktplarıgörBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ktplarıgörBtn.FlatAppearance.BorderSize = 0;
+            this.ktplarıgörBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ktplarıgörBtn.ForeColor = System.Drawing.Color.Teal;
+            this.ktplarıgörBtn.Location = new System.Drawing.Point(434, 283);
             this.ktplarıgörBtn.Name = "ktplarıgörBtn";
-            this.ktplarıgörBtn.Size = new System.Drawing.Size(158, 134);
+            this.ktplarıgörBtn.Size = new System.Drawing.Size(219, 170);
             this.ktplarıgörBtn.TabIndex = 2;
             this.ktplarıgörBtn.Text = "Kitapları Görüntüle";
             this.ktplarıgörBtn.UseVisualStyleBackColor = true;
@@ -70,9 +88,15 @@
             // 
             // KullaniciIslemleriBtn
             // 
-            this.KullaniciIslemleriBtn.Location = new System.Drawing.Point(131, 297);
+            this.KullaniciIslemleriBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.KullaniciIslemleriBtn.FlatAppearance.BorderSize = 0;
+            this.KullaniciIslemleriBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.KullaniciIslemleriBtn.ForeColor = System.Drawing.Color.Teal;
+            this.KullaniciIslemleriBtn.Location = new System.Drawing.Point(215, 283);
             this.KullaniciIslemleriBtn.Name = "KullaniciIslemleriBtn";
-            this.KullaniciIslemleriBtn.Size = new System.Drawing.Size(156, 126);
+            this.KullaniciIslemleriBtn.Size = new System.Drawing.Size(219, 170);
             this.KullaniciIslemleriBtn.TabIndex = 3;
             this.KullaniciIslemleriBtn.Text = "Üye İşlemleri";
             this.KullaniciIslemleriBtn.UseVisualStyleBackColor = true;
@@ -80,9 +104,15 @@
             // 
             // oduncverBtn
             // 
-            this.oduncverBtn.Location = new System.Drawing.Point(723, 59);
+            this.oduncverBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.oduncverBtn.FlatAppearance.BorderSize = 0;
+            this.oduncverBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.oduncverBtn.ForeColor = System.Drawing.Color.Teal;
+            this.oduncverBtn.Location = new System.Drawing.Point(651, 113);
             this.oduncverBtn.Name = "oduncverBtn";
-            this.oduncverBtn.Size = new System.Drawing.Size(147, 126);
+            this.oduncverBtn.Size = new System.Drawing.Size(219, 170);
             this.oduncverBtn.TabIndex = 4;
             this.oduncverBtn.Text = "Ödünç Ver";
             this.oduncverBtn.UseVisualStyleBackColor = true;
@@ -90,9 +120,15 @@
             // 
             // odunctakipBtn
             // 
-            this.odunctakipBtn.Location = new System.Drawing.Point(723, 297);
+            this.odunctakipBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.odunctakipBtn.FlatAppearance.BorderSize = 0;
+            this.odunctakipBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.odunctakipBtn.ForeColor = System.Drawing.Color.Teal;
+            this.odunctakipBtn.Location = new System.Drawing.Point(651, 283);
             this.odunctakipBtn.Name = "odunctakipBtn";
-            this.odunctakipBtn.Size = new System.Drawing.Size(153, 132);
+            this.odunctakipBtn.Size = new System.Drawing.Size(219, 170);
             this.odunctakipBtn.TabIndex = 5;
             this.odunctakipBtn.Text = "Ödünç Takip";
             this.odunctakipBtn.UseVisualStyleBackColor = true;
@@ -102,6 +138,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1085, 565);
             this.Controls.Add(this.odunctakipBtn);
             this.Controls.Add(this.oduncverBtn);
@@ -109,8 +147,13 @@
             this.Controls.Add(this.ktplarıgörBtn);
             this.Controls.Add(this.uyeekleBtn);
             this.Controls.Add(this.button1);
+            this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Black;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.MaximizeBox = false;
             this.Name = "AnaPencere";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gümüşhane Kütüphanesi";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AnaPencere_FormClosed);
             this.ResumeLayout(false);

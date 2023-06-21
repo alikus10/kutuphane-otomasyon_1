@@ -47,7 +47,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.yeniGosterCb.AutoSize = true;
             this.yeniGosterCb.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.yeniGosterCb.Location = new System.Drawing.Point(419, 110);
+            this.yeniGosterCb.Location = new System.Drawing.Point(242, 77);
             this.yeniGosterCb.Name = "yeniGosterCb";
             this.yeniGosterCb.Size = new System.Drawing.Size(69, 20);
             this.yeniGosterCb.TabIndex = 3;
@@ -57,61 +57,58 @@
             // 
             // yeniSifreTxt
             // 
-            this.yeniSifreTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.yeniSifreTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.yeniSifreTxt.Location = new System.Drawing.Point(145, 74);
+            this.yeniSifreTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.yeniSifreTxt.Location = new System.Drawing.Point(115, 49);
             this.yeniSifreTxt.Name = "yeniSifreTxt";
             this.yeniSifreTxt.PasswordChar = '*';
-            this.yeniSifreTxt.Size = new System.Drawing.Size(338, 27);
+            this.yeniSifreTxt.Size = new System.Drawing.Size(196, 22);
             this.yeniSifreTxt.TabIndex = 1;
             // 
             // yeniEmailTxt
             // 
-            this.yeniEmailTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.yeniEmailTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.yeniEmailTxt.Location = new System.Drawing.Point(145, 16);
+            this.yeniEmailTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.yeniEmailTxt.Location = new System.Drawing.Point(116, 21);
             this.yeniEmailTxt.Name = "yeniEmailTxt";
-            this.yeniEmailTxt.Size = new System.Drawing.Size(338, 27);
+            this.yeniEmailTxt.Size = new System.Drawing.Size(195, 22);
             this.yeniEmailTxt.TabIndex = 6;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(76, 74);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(69, 52);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 25);
+            this.label2.Size = new System.Drawing.Size(40, 16);
             this.label2.TabIndex = 4;
             this.label2.Text = "Şifre :";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(60, 16);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(59, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 25);
+            this.label1.Size = new System.Drawing.Size(51, 16);
             this.label1.TabIndex = 5;
             this.label1.Text = "E-Mail :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(14, 139);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(27, 106);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 25);
+            this.label3.Size = new System.Drawing.Size(83, 16);
             this.label3.TabIndex = 9;
             this.label3.Text = "Şifre Tekrar :";
             // 
             // tyeniSifreTxt
             // 
-            this.tyeniSifreTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tyeniSifreTxt.Location = new System.Drawing.Point(144, 136);
+            this.tyeniSifreTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tyeniSifreTxt.Location = new System.Drawing.Point(114, 103);
             this.tyeniSifreTxt.Name = "tyeniSifreTxt";
-            this.tyeniSifreTxt.Size = new System.Drawing.Size(339, 27);
+            this.tyeniSifreTxt.PasswordChar = '*';
+            this.tyeniSifreTxt.Size = new System.Drawing.Size(197, 22);
             this.tyeniSifreTxt.TabIndex = 4;
             // 
             // tYeniGoster
@@ -121,7 +118,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tYeniGoster.AutoSize = true;
             this.tYeniGoster.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tYeniGoster.Location = new System.Drawing.Point(419, 172);
+            this.tYeniGoster.Location = new System.Drawing.Point(242, 131);
             this.tYeniGoster.Name = "tYeniGoster";
             this.tYeniGoster.Size = new System.Drawing.Size(69, 20);
             this.tYeniGoster.TabIndex = 5;
@@ -131,18 +128,20 @@
             // 
             // k_olusturBtn
             // 
-            this.k_olusturBtn.Location = new System.Drawing.Point(346, 237);
+            this.k_olusturBtn.BackColor = System.Drawing.SystemColors.Window;
+            this.k_olusturBtn.ForeColor = System.Drawing.Color.Teal;
+            this.k_olusturBtn.Location = new System.Drawing.Point(116, 167);
             this.k_olusturBtn.Name = "k_olusturBtn";
-            this.k_olusturBtn.Size = new System.Drawing.Size(132, 37);
+            this.k_olusturBtn.Size = new System.Drawing.Size(195, 37);
             this.k_olusturBtn.TabIndex = 10;
             this.k_olusturBtn.Text = "Kullanıcı Oluştur";
-            this.k_olusturBtn.UseVisualStyleBackColor = true;
+            this.k_olusturBtn.UseVisualStyleBackColor = false;
             // 
             // kayitPb
             // 
-            this.kayitPb.Location = new System.Drawing.Point(254, 237);
+            this.kayitPb.Location = new System.Drawing.Point(116, 167);
             this.kayitPb.Name = "kayitPb";
-            this.kayitPb.Size = new System.Drawing.Size(86, 37);
+            this.kayitPb.Size = new System.Drawing.Size(195, 37);
             this.kayitPb.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.kayitPb.TabIndex = 11;
             this.kayitPb.Visible = false;
@@ -163,7 +162,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "KullanıcıKayıt";
-            this.Size = new System.Drawing.Size(530, 330);
+            this.Size = new System.Drawing.Size(340, 220);
             this.ResumeLayout(false);
             this.PerformLayout();
 

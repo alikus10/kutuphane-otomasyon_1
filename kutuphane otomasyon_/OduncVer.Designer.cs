@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OduncVer));
             this.uyeoduncDgw = new System.Windows.Forms.DataGridView();
             this.kitapoduncDgw = new System.Windows.Forms.DataGridView();
             this.oduncverBtn = new System.Windows.Forms.Button();
@@ -161,7 +162,9 @@
             this.Controls.Add(this.oduncverBtn);
             this.Controls.Add(this.kitapoduncDgw);
             this.Controls.Add(this.uyeoduncDgw);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "OduncVer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OduncVer";
             ((System.ComponentModel.ISupportInitialize)(this.uyeoduncDgw)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kitapoduncDgw)).EndInit();

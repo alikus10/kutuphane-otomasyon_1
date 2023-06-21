@@ -24,7 +24,5 @@ namespace kutuphane_otomasyon_.Kontroller
             else
                 sifreTxt.PasswordChar = '*';
         }
-
-        
     }
 }
