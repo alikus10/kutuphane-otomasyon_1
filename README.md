@@ -20,6 +20,6 @@ Firebase bağlatı bilgilerinin tutulduğu config.xml dosyasının içeriği şu
 	<FireBase>
 		<ApiKey>ApiKey_Bilgisi</ApiKey>
 		<AuthDomain>AuthDomain_Bilgisi</AuthDomain>
-		<FBDomain>Firestorage Domain bilgisi</FBDomain>
-		<FSDomain></FSDomain>
+		<FBDomain>Firebase Domain bilgisi</FBDomain>
+		<FSDomain>Firestorage Domain Bilgisi</FSDomain>
 	</FireBase>
