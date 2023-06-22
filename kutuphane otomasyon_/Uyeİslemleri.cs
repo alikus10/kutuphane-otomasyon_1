@@ -106,9 +106,12 @@ namespace kutuphane_otomasyon_
 
                 }
                 catch (Exception ex) { }
-
-                uye_listele();
-                uyeDuzenle.ShowDialog();
+                finally
+                {
+                    uyeDuzenle.ShowDialog();
+                    uye_listele();
+                    uyeDuzenle.Close();
+                }
             }
         }
 

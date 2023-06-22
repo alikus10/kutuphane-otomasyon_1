@@ -86,6 +86,7 @@ namespace kutuphane_otomasyon_
                 MessageBox.Show("Ödünç Verme İşlemi Başarıyla Tamamlandı", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
+
             }
             catch (Exception ex)
             {

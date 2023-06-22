@@ -33,6 +33,7 @@ namespace kutuphane_otomasyon_
         {
             try
             {
+                uyeeklePB.Visible = true;
                 Uye yeniUye = new Uye();
                 yeniUye.uyeAdi = adTxt.Text;
                 yeniUye.uyeSoyadi = soyadTxt.Text;
@@ -55,13 +56,16 @@ namespace kutuphane_otomasyon_
                 }
 
                 await istemci.Child("Üyeler").Child(kimliknoTxt.Text).PutAsync(yeniUye);
+                uyeeklePB.Visible = false;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Hata:" + ex.Message, "Hata!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                uyeeklePB.Visible = false;
             }
             finally
             {
+                uyeeklePB.Visible = false;
                 this.Close();
             }
         }

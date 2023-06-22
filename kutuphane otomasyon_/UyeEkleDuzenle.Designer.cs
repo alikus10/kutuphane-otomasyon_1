@@ -49,7 +49,7 @@
             // 
             // adTxt
             // 
-            this.adTxt.Location = new System.Drawing.Point(113, 296);
+            this.adTxt.Location = new System.Drawing.Point(116, 251);
             this.adTxt.Name = "adTxt";
             this.adTxt.Size = new System.Drawing.Size(285, 22);
             this.adTxt.TabIndex = 1;
@@ -57,7 +57,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 299);
+            this.label1.Location = new System.Drawing.Point(37, 254);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 16);
             this.label1.TabIndex = 2;
@@ -66,7 +66,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 327);
+            this.label2.Location = new System.Drawing.Point(37, 282);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 16);
             this.label2.TabIndex = 2;
@@ -74,7 +74,7 @@
             // 
             // soyadTxt
             // 
-            this.soyadTxt.Location = new System.Drawing.Point(113, 324);
+            this.soyadTxt.Location = new System.Drawing.Point(116, 279);
             this.soyadTxt.Name = "soyadTxt";
             this.soyadTxt.Size = new System.Drawing.Size(285, 22);
             this.soyadTxt.TabIndex = 2;
@@ -82,7 +82,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(34, 355);
+            this.label3.Location = new System.Drawing.Point(37, 310);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 16);
             this.label3.TabIndex = 2;
@@ -90,7 +90,7 @@
             // 
             // kimliknoTxt
             // 
-            this.kimliknoTxt.Location = new System.Drawing.Point(113, 352);
+            this.kimliknoTxt.Location = new System.Drawing.Point(116, 307);
             this.kimliknoTxt.Name = "kimliknoTxt";
             this.kimliknoTxt.Size = new System.Drawing.Size(285, 22);
             this.kimliknoTxt.TabIndex = 3;
@@ -98,7 +98,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(34, 383);
+            this.label4.Location = new System.Drawing.Point(37, 338);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 16);
             this.label4.TabIndex = 2;
@@ -106,16 +106,16 @@
             // 
             // telnoTxt
             // 
-            this.telnoTxt.Location = new System.Drawing.Point(113, 380);
+            this.telnoTxt.Location = new System.Drawing.Point(116, 335);
             this.telnoTxt.Name = "telnoTxt";
             this.telnoTxt.Size = new System.Drawing.Size(285, 22);
             this.telnoTxt.TabIndex = 4;
             // 
             // uyeekleBtn
             // 
-            this.uyeekleBtn.Location = new System.Drawing.Point(254, 425);
+            this.uyeekleBtn.Location = new System.Drawing.Point(116, 380);
             this.uyeekleBtn.Name = "uyeekleBtn";
-            this.uyeekleBtn.Size = new System.Drawing.Size(144, 44);
+            this.uyeekleBtn.Size = new System.Drawing.Size(285, 44);
             this.uyeekleBtn.TabIndex = 5;
             this.uyeekleBtn.Text = "Üye Ekle";
             this.uyeekleBtn.UseVisualStyleBackColor = true;
@@ -124,7 +124,7 @@
             // uyeresimPb
             // 
             this.uyeresimPb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.uyeresimPb.Location = new System.Drawing.Point(113, 39);
+            this.uyeresimPb.Location = new System.Drawing.Point(116, 12);
             this.uyeresimPb.Name = "uyeresimPb";
             this.uyeresimPb.Size = new System.Drawing.Size(285, 208);
             this.uyeresimPb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -133,7 +133,7 @@
             // 
             // resimsecBtn
             // 
-            this.resimsecBtn.Location = new System.Drawing.Point(337, 224);
+            this.resimsecBtn.Location = new System.Drawing.Point(340, 197);
             this.resimsecBtn.Name = "resimsecBtn";
             this.resimsecBtn.Size = new System.Drawing.Size(61, 22);
             this.resimsecBtn.TabIndex = 7;
@@ -147,9 +147,9 @@
             // 
             // uyeeklePB
             // 
-            this.uyeeklePB.Location = new System.Drawing.Point(132, 425);
+            this.uyeeklePB.Location = new System.Drawing.Point(116, 380);
             this.uyeeklePB.Name = "uyeeklePB";
-            this.uyeeklePB.Size = new System.Drawing.Size(103, 44);
+            this.uyeeklePB.Size = new System.Drawing.Size(285, 44);
             this.uyeeklePB.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.uyeeklePB.TabIndex = 8;
             this.uyeeklePB.Visible = false;
@@ -158,7 +158,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(443, 511);
+            this.ClientSize = new System.Drawing.Size(444, 448);
             this.Controls.Add(this.uyeeklePB);
             this.Controls.Add(this.resimsecBtn);
             this.Controls.Add(this.uyeresimPb);
@@ -172,9 +172,10 @@
             this.Controls.Add(this.adTxt);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "UyeEkleDuzenle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "UyeEkle";
+            this.Text = "Üye Ekle";
             ((System.ComponentModel.ISupportInitialize)(this.uyeresimPb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
@@ -189,12 +190,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button resimsecBtn;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.ProgressBar uyeeklePB;
         public System.Windows.Forms.TextBox adTxt;
         public System.Windows.Forms.TextBox soyadTxt;
         public System.Windows.Forms.TextBox kimliknoTxt;
         public System.Windows.Forms.TextBox telnoTxt;
         public System.Windows.Forms.PictureBox uyeresimPb;
         public System.Windows.Forms.Button uyeekleBtn;
+        private System.Windows.Forms.ProgressBar uyeeklePB;
     }
 }

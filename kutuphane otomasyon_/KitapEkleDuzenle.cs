@@ -29,17 +29,21 @@ namespace kutuphane_otomasyon_
         {
             try 
             {
+                kitapeklePb.Visible = true;
                 Kitap yeniKitap = new Kitap();
                 yeniKitap.kitapAdi = kitapadıTxt.Text;
 
                 await istemci.Child("Kitaplar").Child(kitaptürüTxt.Text).PutAsync(yeniKitap);
+                kitapeklePb.Visible = false;
             }
             catch (Exception ex) 
             {
+                kitapeklePb.Visible = false;
                 MessageBox.Show("Hata:" + ex.Message, "Hata!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
+                kitapeklePb.Visible = false;
                 this.Close();
             }
         }

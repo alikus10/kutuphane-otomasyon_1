@@ -40,6 +40,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.verilistrhTxt = new System.Windows.Forms.TextBox();
             this.teslimtrhTxt = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.uyeoduncDgw)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kitapoduncDgw)).BeginInit();
             this.SuspendLayout();
@@ -48,13 +50,14 @@
             // 
             this.uyeoduncDgw.AllowUserToAddRows = false;
             this.uyeoduncDgw.AllowUserToDeleteRows = false;
+            this.uyeoduncDgw.BackgroundColor = System.Drawing.SystemColors.Control;
             this.uyeoduncDgw.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.uyeoduncDgw.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.uyeoduncDgw.Location = new System.Drawing.Point(31, 39);
+            this.uyeoduncDgw.Location = new System.Drawing.Point(31, 53);
             this.uyeoduncDgw.Name = "uyeoduncDgw";
             this.uyeoduncDgw.RowHeadersWidth = 51;
             this.uyeoduncDgw.RowTemplate.Height = 24;
-            this.uyeoduncDgw.Size = new System.Drawing.Size(590, 220);
+            this.uyeoduncDgw.Size = new System.Drawing.Size(604, 220);
             this.uyeoduncDgw.TabIndex = 0;
             this.uyeoduncDgw.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.uyeoduncDgw_CellMouseClick);
             // 
@@ -62,21 +65,22 @@
             // 
             this.kitapoduncDgw.AllowUserToAddRows = false;
             this.kitapoduncDgw.AllowUserToDeleteRows = false;
+            this.kitapoduncDgw.BackgroundColor = System.Drawing.SystemColors.Control;
             this.kitapoduncDgw.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kitapoduncDgw.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.kitapoduncDgw.Location = new System.Drawing.Point(31, 347);
             this.kitapoduncDgw.Name = "kitapoduncDgw";
             this.kitapoduncDgw.RowHeadersWidth = 51;
             this.kitapoduncDgw.RowTemplate.Height = 24;
-            this.kitapoduncDgw.Size = new System.Drawing.Size(590, 208);
+            this.kitapoduncDgw.Size = new System.Drawing.Size(604, 208);
             this.kitapoduncDgw.TabIndex = 1;
             this.kitapoduncDgw.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.kitapoduncDgw_CellMouseClick);
             // 
             // oduncverBtn
             // 
-            this.oduncverBtn.Location = new System.Drawing.Point(806, 477);
+            this.oduncverBtn.Location = new System.Drawing.Point(759, 452);
             this.oduncverBtn.Name = "oduncverBtn";
-            this.oduncverBtn.Size = new System.Drawing.Size(138, 52);
+            this.oduncverBtn.Size = new System.Drawing.Size(200, 52);
             this.oduncverBtn.TabIndex = 5;
             this.oduncverBtn.Text = "Ödünç Ver";
             this.oduncverBtn.UseVisualStyleBackColor = true;
@@ -146,11 +150,33 @@
             this.teslimtrhTxt.Size = new System.Drawing.Size(194, 22);
             this.teslimtrhTxt.TabIndex = 4;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(28, 22);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(75, 20);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Üyeler :";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(29, 317);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(86, 20);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Kitaplar :";
+            // 
             // OduncVer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(986, 600);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.teslimtrhTxt);
             this.Controls.Add(this.verilistrhTxt);
             this.Controls.Add(this.odunckitapTxt);
@@ -163,9 +189,10 @@
             this.Controls.Add(this.kitapoduncDgw);
             this.Controls.Add(this.uyeoduncDgw);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "OduncVer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "OduncVer";
+            this.Text = "Ödünç Ver";
             ((System.ComponentModel.ISupportInitialize)(this.uyeoduncDgw)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kitapoduncDgw)).EndInit();
             this.ResumeLayout(false);
@@ -186,5 +213,7 @@
         private System.Windows.Forms.TextBox teslimtrhTxt;
         public System.Windows.Forms.TextBox oduncuyenoTxt;
         public System.Windows.Forms.TextBox odunckitapTxt;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

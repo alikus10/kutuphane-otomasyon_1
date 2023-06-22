@@ -34,6 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.kitapadıTxt = new System.Windows.Forms.TextBox();
             this.kitapekleBtn = new System.Windows.Forms.Button();
+            this.kitapeklePb = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // label1
@@ -49,7 +50,7 @@
             // 
             this.kitaptürüTxt.Location = new System.Drawing.Point(107, 41);
             this.kitaptürüTxt.Name = "kitaptürüTxt";
-            this.kitaptürüTxt.Size = new System.Drawing.Size(285, 22);
+            this.kitaptürüTxt.Size = new System.Drawing.Size(197, 22);
             this.kitaptürüTxt.TabIndex = 1;
             // 
             // label2
@@ -65,24 +66,34 @@
             // 
             this.kitapadıTxt.Location = new System.Drawing.Point(107, 69);
             this.kitapadıTxt.Name = "kitapadıTxt";
-            this.kitapadıTxt.Size = new System.Drawing.Size(285, 22);
+            this.kitapadıTxt.Size = new System.Drawing.Size(197, 22);
             this.kitapadıTxt.TabIndex = 2;
             // 
             // kitapekleBtn
             // 
-            this.kitapekleBtn.Location = new System.Drawing.Point(226, 118);
+            this.kitapekleBtn.Location = new System.Drawing.Point(107, 115);
             this.kitapekleBtn.Name = "kitapekleBtn";
-            this.kitapekleBtn.Size = new System.Drawing.Size(166, 47);
+            this.kitapekleBtn.Size = new System.Drawing.Size(197, 47);
             this.kitapekleBtn.TabIndex = 3;
             this.kitapekleBtn.Text = "Kitap Ekle";
             this.kitapekleBtn.UseVisualStyleBackColor = true;
             this.kitapekleBtn.Click += new System.EventHandler(this.kitapekleBtn_Click);
             // 
+            // kitapeklePb
+            // 
+            this.kitapeklePb.Location = new System.Drawing.Point(107, 115);
+            this.kitapeklePb.Name = "kitapeklePb";
+            this.kitapeklePb.Size = new System.Drawing.Size(197, 47);
+            this.kitapeklePb.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.kitapeklePb.TabIndex = 4;
+            this.kitapeklePb.Visible = false;
+            // 
             // KitapEkleDuzenle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(460, 191);
+            this.ClientSize = new System.Drawing.Size(342, 191);
+            this.Controls.Add(this.kitapeklePb);
             this.Controls.Add(this.kitapekleBtn);
             this.Controls.Add(this.kitapadıTxt);
             this.Controls.Add(this.label2);
@@ -106,5 +117,6 @@
         public System.Windows.Forms.TextBox kitaptürüTxt;
         public System.Windows.Forms.TextBox kitapadıTxt;
         public System.Windows.Forms.Button kitapekleBtn;
+        public System.Windows.Forms.ProgressBar kitapeklePb;
     }
 }
